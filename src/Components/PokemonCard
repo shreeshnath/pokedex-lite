@@ -1,0 +1,37 @@
+import React from "react";
+
+export default function PokemonCard({ p, onOpen, isFav, onToggleFav }) {
+  // p contains { name, image, types }
+
+  return (
+    <div className="pokemon-card">
+
+      {/* Favourite Icon */}
+      <div
+        className="fav"
+        onClick={(e) => {
+          e.stopPropagation();
+          onToggleFav(p.name);
+        }}
+      >
+        {isFav ? "★" : "☆"}
+      </div>
+
+      {/* Card Body */}
+      <button className="card-body" onClick={() => onOpen(p)}>
+        <img
+          src={p.image}
+          alt={p.name}
+          onError={(e) => {
+            e.target.src = "/placeholder.png";
+          }}
+        />
+
+        <div className="p-info">
+          <div className="p-name">{p.name}</div>
+          <div className="p-types">{p.types?.join(", ")}</div>
+        </div>
+      </button>
+    </div>
+  );
+}
