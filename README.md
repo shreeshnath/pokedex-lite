@@ -2,8 +2,8 @@
 A lightweight, responsive, and interactive Pokédex web application built using React + Vite. This project allows users to browse Pokémon, search by name, filter by type, paginate results, mark favorites, and view detailed stats — all powered by the PokéAPI.
 
 🚀 Live Demo
-🔗 Inspect: https://vercel.com/shreeshnaths-projects/pokedex-lite/GuEyuZJns1g9czWwEXqjP7SL8GxG [2s]
-✅  Preview: https://pokedex-lite-dbhcwh85y-shreeshnaths-projects.vercel.app [13s]
+🔗 Inspect: https://vercel.com/shreeshnaths-projects/pokedex-lite/GuEyuZJns1g9czWwEXqjP7SL8GxG 
+✅  Preview: https://pokedex-lite-dbhcwh85y-shreeshnaths-projects.vercel.app 
 📂 GitHub Repository
 🔗 https://github.com/shreeshnath/pokedex-lite
 
@@ -23,7 +23,7 @@ Works on phones, tablets, desktops
 
 ⚙️ Installation & Setup (Mac / Windows / Linux)
 1️⃣ Clone the Repository
-git clone https://github.com/YOUR-USERNAME/pokedex-lite.git
+git clone https://github.com/shreeshnath/pokedex-lite.git
 cd pokedex-lite
 
 2️⃣ Install Dependencies
@@ -72,15 +72,10 @@ Instant sync
 Simple persistence
 
 🧩 Challenges Faced
-1️⃣ Handling Paginated API Calls
+Handling Paginated API Calls
 PokéAPI does not return full Pokémon details on the first call. Solution:
 Fetch list ➜ map results ➜ fetch details for each Pokémon in parallel (Promise.all).
-2️⃣ Combining Search + Type Filter
-Both filters work client-side. Solution:
-Apply search filter first
-Then apply type filter
-Memoize results for performance
-3️⃣ Managing Favorites With LocalStorage
+Managing Favorites With LocalStorage
 Solution:
 Create custom hook useLocalStorage()
 Sync on component mount
